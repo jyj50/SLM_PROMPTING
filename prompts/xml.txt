@@ -1,0 +1,23 @@
+<task>
+  <instruction>아래 문서에서 정보를 추출하여 JSON으로 출력하세요.</instruction>
+  <output_format>JSON만 출력하세요. 설명이나 코드블록 없이 JSON만 출력하세요.</output_format>
+  <fields>
+    <field name="기관명">발신 기관 또는 담당 부서명</field>
+    <field name="문서번호">문서 고유 번호</field>
+    <field name="작성일">작성일 (YYYY-MM-DD 형식)</field>
+    <field name="제목">문서 제목</field>
+    <field name="핵심내용">문서 핵심 내용 요약 (1~3문장)</field>
+    <field name="담당자">담당자 이름 (직책 포함)</field>
+    <field name="처리기한">처리 또는 제출 기한 (YYYY-MM-DD 형식)</field>
+  </fields>
+  <rules>
+    <rule>정보가 없는 필드는 빈 문자열("")로 채울 것</rule>
+    <rule>날짜는 반드시 YYYY-MM-DD 형식으로 변환할 것</rule>
+  </rules>
+</task>
+
+<document>
+{document}
+</document>
+
+Output JSON:
